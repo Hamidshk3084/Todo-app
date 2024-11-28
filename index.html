@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+
+{% block head %} 
+
+<title>taskmaster</title>
+
+
+
+{% endblock %}
+
+
+{% block body %} 
+
+<div class="content">
+    <h1 style="text-align: center;">TODAY'S TASKS</h1>
+    {% if tasks|length < 1 %}
+    <h4 style="text-align: center;"> There are no tasks here. Create a new task here!</h4>
+
+    {% else %}
+    <table class="table_main">
+        <tr>
+            <th>Task</th>
+            <th>Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.content }}</td>
+                <td>{{ task.date_created.date() }}</td>
+                <td>
+                    <a href="/delete/{{ task.id }}">delete</a>
+
+                    <br>
+                    <a href="/update/{{ task.id }}">update</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <form action="/" method="POST">
+        <input type="text" name="content" id="content" placeholder="Add a task">
+        <input type="submit" id="submit_btn" value="Add task">
+    </form>
+</div>
+
+{% endblock %}
+
