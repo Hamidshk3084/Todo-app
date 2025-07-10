@@ -1,0 +1,101 @@
+body {
+    background-color: #f5f7fb;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+input, select, button, .btn {
+    border-radius: 8px;
+}
+
+form .form-select, form .form-control {
+    background-color: #ffffff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+form .form-select option {
+    background-color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #7c3aed;
+    border: none;
+}
+
+.btn-success {
+    background-color: #34d399;
+    border: none;
+}
+
+.btn-danger {
+    background-color: #f87171;
+    border: none;
+}
+
+.btn-warning {
+    background-color: #fbbf24;
+    color: #333;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #9ca3af;
+    border: none;
+}
+
+/* Progress bar */
+.progress {
+    height: 20px;
+    border-radius: 10px;
+    background-color: #e5e7eb;
+}
+
+.progress-bar {
+    background-color: #7c3aed;
+    font-weight: bold;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #1e1e2f !important;
+    color: #f5f5f5 !important;
+}
+
+.dark-mode .card {
+    background-color: #2c2c3e;
+    color: #f5f5f5;
+}
+
+.dark-mode input,
+.dark-mode .form-control,
+.dark-mode .form-select {
+    background-color: #3b3b4f;
+    color: #fff;
+    border: none;
+}
+
+.dark-mode .progress {
+    background-color: #3b3b4f;
+}
+
+.dark-mode .progress-bar {
+    background-color: #8b5cf6;
+}
